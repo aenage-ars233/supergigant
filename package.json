@@ -1,0 +1,22 @@
+{
+  "name": "supergigant",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0"
+  }
+}

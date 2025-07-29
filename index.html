@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Игра Кроссворд Супергигант</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page__body">
+    <header class="page__header page-header">
+      <h1 class="visually-hidden">Игра Кроссворд Супергигант</h1>
+      <a class="page-header__profile" href="#">
+        <img class="page-header__profile-avatar" src="" alt="Аватар игрока" width="80" height="80">
+        <h2 class="page-header__profile-name">Имя игрока</h2>
+      </a>
+      <a class="page-header__lifes" href="#">
+        <img class="page-header__life-icon" src="img/heart.png" alt="Жизней:" width="85" height="80">
+        <span class="page-header__lifes-counter">5</span>
+        <p class="page-header__lifes-timer">Все</p>
+      </a>
+      <a class="page-header__task" href="#">
+        <h2 class="page-header__task-text">Пройти по следу похитителей</h2>
+        <div class="page-header__task-range">
+          <div class="page-header__task-bar"></div>
+        </div>
+      </a>
+      <a class="page-header__coins" href="#">
+        <img class="page-header__coin-icon" src="img/coin.png" alt="Монет:" width="90" height="60">
+        <p class="page-header__coins-counter">250</p>
+      </a>
+    </header>
+    <footer class="page__footer page-footer">
+      <ul class="page-footer__link-list">
+        <li class="page-footer__link-item">
+          <a class="page-footer__link" href="#">
+            <img class="page-footer__link-icon" src="" alt="">
+            <h2 class="page-footer__link-text">Магазин</h2>
+          </a>
+        </li>
+        <li class="page-footer__link-item">
+          <a class="page-footer__link" href="#">
+            <img class="page-footer__link-icon" src="" alt="">
+            <h2 class="page-footer__link-text">Задания</h2>
+          </a>
+        </li>
+        <li class="page-footer__link-item">
+          <a class="page-footer__link page-footer__link--active" href="#">
+            <img class="page-footer__link-icon" src="" alt="">
+            <h2 class="page-footer__link-text">Главная</h2>
+          </a>
+        </li>
+        <li class="page-footer__link-item">
+          <a class="page-footer__link" href="#">
+            <img class="page-footer__link-icon" src="" alt="">
+            <h2 class="page-footer__link-text">Комната смеха</h2>
+          </a>
+        </li>
+        <li class="page-footer__link-item">
+          <a class="page-footer__link" href="#">
+            <img class="page-footer__link-icon" src="" alt="">
+            <h2 class="page-footer__link-text">Сезон</h2>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <div class="page__modal profile-modal hidden">
+      <h2 class="profile-modal__title">Профиль</h2>
+      <button class="profile-modal__close-button" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" fill="black"/>
+        </svg>
+      </button>
+      <ul class="profile-modal__tabs-list">
+        <li class="profile-modal__tab-item">
+          <a class="profile-modal__tab-link profile-modal__tab-link--active" href="#" data-section="profile-settings">Настройки профиля</a>
+        </li>
+        <li class="profile-modal__tab-item">
+          <a class="profile-modal__tab-link" href="#" data-section="progress">Прогресс</a>
+        </li>
+        <li class="profile-modal__tab-item">
+          <a class="profile-modal__tab-link" href="#" data-section="feedback">Оставьте отзыв</a>
+        </li>
+      </ul>
+      <div class="profile-modal__content">
+        <section class="profile-modal__section profile-settings">
+          <h3 class="visually-hidden">Настройки профиля</h3>
+          <ul class="profile-settings__avatars-list">
+            <li class="profile-settings__avatar-item">
+              <img class="profile-settings__avatar" src="img/avatars/main-hero.png" alt="Хохлатыч - главный герой!" width="90" height="90">
+            </li>
+            <li class="profile-settings__avatar-item">
+              <img class="profile-settings__avatar" src="img/avatars/norka.png" alt="Норка" width="90" height="90">
+            </li>
+            <li class="profile-settings__avatar-item">
+              <img class="profile-settings__avatar" src="img/avatars/snow.png" alt="Снежиныч" width="90" height="90">
+            </li>
+            <li class="profile-settings__avatar-item">
+              <img class="profile-settings__avatar" src="img/avatars/red.png" alt="Рыжик" width="90" height="90">
+            </li>
+            <li class="profile-settings__avatar-item">
+              <img class="profile-settings__avatar" src="img/avatars/red-hohlatysh.png" alt="Рыжий хохлатыч" width="90" height="90">
+            </li>
+          </ul>
+          <div class="profile-settings__result">
+            <form class="profile-settings__result-form" method="post" action="#" enctype="multipart/form-data">
+              <img class="profile-settings__result-avatar" src="img/avatars/main-hero.png" alt="Ваш аватар" width="150" height="150">
+              <label class="profile-settings__upload-avatar">
+                <input class="visually-hidden" id="upload-avatar" type="file" name="avatar">
+                <span class="profile-settings__upload-button">Загрузить свой аватар</span>
+              </label>
+              <input class="profile-settings__player-name" type="text" name="player-name" minlength="3" maxlength="25" required>
+              <div class="profile-settings__controls">
+                <button class="profile-settings__save-button" type="submit">Сохранить</button>
+                <button class="profile-settings__reset-button" type="reset">Отмена</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="profile-modal__section progress hidden">
+          <h3 class="visually-hidden">Прогресс игрока</h3>
+          <ul class="progress__list">
+            <li class="progress__item">
+              <p class="progress__text">Пройдено уровней: <span class="progress__level-success">0</span></p>
+              <p class="progress__text">Завершено задач: <span class="progress__task-success">0</span></p>
+              <div class="progress__level-types">
+                Головоломки:
+                <p class="progress__crosswords">Кроссворды: <span class="progress__crosswords-count">0</span></p>
+                <p class="progress__scanwords">Сканворды: <span class="progress__scanwordss-count">0</span></p>
+                <p class="progress__uncrosswords">Антикроссворды: <span class="progress__uncrosswords-count">0</span></p>
+                <p class="progress__japanese-crosswords">Японские кроссворды: <span class="progress__japanese-crosswords-count">0</span></p>
+                <p class="progress__filwords">Филворды: <span class="progress__filwords-count">0</span></p>
+                <p class="progress__keywords">Ключворды: <span class="progress__keywords-count">0</span></p>
+                <p class="progress__sudoky">Судоку: <span class="progress__sudoky-count">0</span></p>
+              </div>
+            </li>
+          </ul>
+          <button class="progress__reset-button">Сбросить прогресс</button>
+        </section>
+        <section class="profile-modal__section feedback hidden">
+          <h2 class="feedback__title">Оставьте свой отзыв</h2>
+          <form class="feedback__form" method="post" action="https://formspree.io/f/myzpjjar" data-redirect="thanks.html">
+            <textarea class="feedback__input" name="feedback" rows="5" maxlength="200"></textarea>
+            <div class="feedback__grades">
+              <h3 class="feedback__grades-title">Поставьте оценку:</h3>
+              <p class="feedback__grades-list">
+                <label class="feedback__grade-label">
+                  <input class="feedback__grade-input" type="radio" name="grade" value="dislike"> Не нравится 👎
+                </label>
+                <label class="feedback__grade-label">
+                  <input class="feedback__grade-input" type="radio" name="grade" value="like"> Нравится 👍
+                </label>
+              </p>
+            </div>
+            <button class="feedback__submit-button">Отправить отзыв</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
