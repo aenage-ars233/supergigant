@@ -5,6 +5,11 @@ import less from "gulp-less";
 import GulpPostCss from "gulp-postcss";
 import autoprefixer from 'autoprefixer';
 import GulpCleanCss from "gulp-clean-css";
+import { deleteAsync } from 'del';
+
+function clean() {
+  return deleteAsync('less/**/*.css');
+}
 
 function styles() {
   return src('less/style.less')
@@ -33,4 +38,4 @@ function server() {
   watch('less/**/*.less', styles);
 }
 
-export default series(styles, server);
+export default series(clean, styles, server);

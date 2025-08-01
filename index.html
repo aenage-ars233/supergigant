@@ -15,10 +15,10 @@
       <a class="page-header__lifes" href="#">
         <img class="page-header__life-icon" src="img/heart.png" alt="Жизней:" width="85" height="80">
         <span class="page-header__lifes-counter">5</span>
-        <p class="page-header__lifes-timer">Все</p>
+        <p class="page-header__lifes-timer"><span class="page-header__lifes-timer-minutes"></span>:<span class="page-header__lifes-timer-seconds"></span></p>
       </a>
       <a class="page-header__task" href="#">
-        <h2 class="page-header__task-text">Пройти по следу похитителей</h2>
+        <h2 class="page-header__task-text">Текст задания</h2>
         <div class="page-header__task-range">
           <div class="page-header__task-bar"></div>
         </div>
@@ -28,6 +28,11 @@
         <p class="page-header__coins-counter">250</p>
       </a>
     </header>
+    <main class="page__main">
+      <section class="page__section" data-task-number="1">
+        <a class="page__level-button first-level" href="levels/level-1/">1</a>
+      </section>
+    </main>
     <footer class="page__footer page-footer">
       <ul class="page-footer__link-list">
         <li class="page-footer__link-item">
@@ -157,6 +162,35 @@
         </section>
       </div>
     </div>
+
+    <div class="page__modal life-modal hidden">
+      <h2 class="life-modal__title">Получите жизни</h2>
+      <button class="life-modal__close-button" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" fill="black"/>
+        </svg>
+      </button>
+      <div class="life-modal__content">
+        <img class="life-modal__life-icon" src="img/heart.png" alt="Жизней:" width="200" height="180">
+        <span class="life-modal__lifes-counter">5</span>
+        <p class="life-modal__text">До восстановления следующей жизни осталось: <br>
+          <span class="life-modal__minutes"></span>:<span class="life-modal__seconds"></span>
+        </p>
+        <button class="life-modal__add-lifes-button">Восполнить <img src="img/coin.png" alt="За" width="70" height="50"> <span class="life-modal__add-lifes-price">90</span></button>
+      </div>
+    </div>
+
+    <div class="scene hidden">
+      <div class="scene__space">
+        <img class="scene__hero" src="" alt="">
+        <p class="scene__hero-speech">
+          <span class="scene__hero-speech-text"></span> <button class="scene__next-hero-speech" type="button">Далее >>></button>
+        </p>
+        <img class="scene__hero2" src="" alt="">
+      </div>
+    </div>
+
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

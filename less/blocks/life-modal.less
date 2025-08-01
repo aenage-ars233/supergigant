@@ -1,0 +1,90 @@
+.life-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  border: 7px solid rgb(255, 208, 0);
+  box-shadow: 0 0 0 730px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.life-modal__title {
+  margin: 0;
+  padding: 5px 8px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgb(255, 208, 0);
+  color: rgb(58, 32, 32);
+}
+
+.life-modal__close-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.life-modal__content {
+  padding-bottom: 30px;
+  background-color: rgb(63, 207, 243);
+  color: white;
+}
+
+.life-modal__life-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.life-modal__lifes-counter {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  margin-top: -120px;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.life-modal__text {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.life-modal__minutes, .life-modal__seconds {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.life-modal__add-lifes-button {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border: none;
+  background-color: rgb(6, 180, 6);
+  color: white;
+  border-radius: 7px;
+  font-size: 25px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(rgb(6, 180, 6), 5%);
+  }
+
+  &:disabled, &:disabled:hover {
+    background-color: gray;
+  }
+}
+
+.life-modal__add-lifes-price {
+  font-weight: 700;
+}
